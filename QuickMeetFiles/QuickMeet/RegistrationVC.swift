@@ -65,10 +65,10 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
-        // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
     
     func setupUI() {
         submitLoginSignUpOutlet.alpha = 0.5
@@ -87,21 +87,18 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         user.password = passwordTextField.text
         user.signUpInBackground(block: { (success, error) in
             if success {
-                print("successfully signed up the user")
+                self.performSegue(withIdentifier: "showChooseMedia", sender: nil)
             }
-            /*if let error = error {
-             print(error.localizedDescription)
-             } else if success {
-             print("User has been signed up")
-             }*/
         })
     }
     
     func login() {
+        print("got to login")
         PFUser.logInWithUsername(inBackground: usernameTextField.text!, password: passwordTextField.text!, block: { (user, error) in
             if user != nil {
                 // Yes, User Exists
                 self.performSegue(withIdentifier: "showTB", sender: nil)
+
             } else {
                 // No, User Doesn't Exist
             }
