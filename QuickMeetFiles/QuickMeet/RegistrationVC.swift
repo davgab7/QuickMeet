@@ -56,16 +56,16 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         }
         textFieldDidChange()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if PFUser.current() != nil {
+            self.performSegue(withIdentifier: "showChooseMedia", sender: nil)
+            //self.performSegue(withIdentifier: "showTabBar", sender: nil)
+        }
     }
     
     func setupUI() {
@@ -83,24 +83,20 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         let user = PFUser()
         user.username = usernameTextField.text
         user.password = passwordTextField.text
-        user.email = "gabewils4@gmail.com"
         user.signUpInBackground(block: { (success, error) in
             if success {
-                print("successfully signed up the user")
+                self.performSegue(withIdentifier: "showChooseMedia", sender: nil)
             }
-            /*if let error = error {
-             print(error.localizedDescription)
-             } else if success {
-             print("User has been signed up")
-             }*/
         })
     }
     
     func login() {
+        print("got to login")
         PFUser.logInWithUsername(inBackground: usernameTextField.text!, password: passwordTextField.text!, block: { (user, error) in
             if user != nil {
                 // Yes, User Exists
-                self.performSegue(withIdentifier: "showMap", sender: nil)
+                print("showChooseMedia")
+                self.performSegue(withIdentifier: "showChooseMedia", sender: nil)
             } else {
                 // No, User Doesn't Exist
             }

@@ -20,6 +20,8 @@
 		8C9606F8218E6D74004663F8 /* QuickMeetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9606F7218E6D74004663F8 /* QuickMeetUITests.swift */; };
 		8C960706218E74F0004663F8 /* ChooseMediaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C960705218E74F0004663F8 /* ChooseMediaVC.swift */; };
 		8C960708218E75C0004663F8 /* ChooseMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C960707218E75C0004663F8 /* ChooseMediaCell.swift */; };
+		8C96070A218E8171004663F8 /* EnterInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C960709218E8171004663F8 /* EnterInfoVC.swift */; };
+		8C96070C218E82F9004663F8 /* EnterInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96070B218E82F9004663F8 /* EnterInfoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		8C9606F9218E6D74004663F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C960705218E74F0004663F8 /* ChooseMediaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMediaVC.swift; sourceTree = "<group>"; };
 		8C960707218E75C0004663F8 /* ChooseMediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMediaCell.swift; sourceTree = "<group>"; };
+		8C960709218E8171004663F8 /* EnterInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInfoVC.swift; sourceTree = "<group>"; };
+		8C96070B218E82F9004663F8 /* EnterInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		8D1C0C9F11EBE0954D03247B /* Pods_QuickMeetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickMeetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A1EF5E91202EE91422B382 /* Pods_QuickMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB08D76FC8DE2E04FF1A1270 /* Pods-QuickMeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMeet.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickMeet/Pods-QuickMeet.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				8C9606D5218E6D71004663F8 /* AppDelegate.swift */,
 				8C9606D7218E6D71004663F8 /* RegistrationVC.swift */,
 				8C960705218E74F0004663F8 /* ChooseMediaVC.swift */,
+				8C960709218E8171004663F8 /* EnterInfoVC.swift */,
+				8C96070B218E82F9004663F8 /* EnterInfoCollectionViewCell.swift */,
 				8C960707218E75C0004663F8 /* ChooseMediaCell.swift */,
 				8C9606D9218E6D71004663F8 /* SecondViewController.swift */,
 				8C9606DB218E6D71004663F8 /* Main.storyboard */,
@@ -393,6 +399,8 @@
 				8C960708218E75C0004663F8 /* ChooseMediaCell.swift in Sources */,
 				8C960706218E74F0004663F8 /* ChooseMediaVC.swift in Sources */,
 				8C9606DA218E6D71004663F8 /* SecondViewController.swift in Sources */,
+				8C96070A218E8171004663F8 /* EnterInfoVC.swift in Sources */,
+				8C96070C218E82F9004663F8 /* EnterInfoCollectionViewCell.swift in Sources */,
 				8C9606D6218E6D71004663F8 /* AppDelegate.swift in Sources */,
 				8C9606D8218E6D71004663F8 /* RegistrationVC.swift in Sources */,
 			);
