@@ -58,7 +58,9 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        if PFUser.current() != nil {
+            self.performSegue(withIdentifier: "showTB", sender: nil)
+        }
     }
     
     override func viewDidLoad() {
@@ -83,7 +85,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         let user = PFUser()
         user.username = usernameTextField.text
         user.password = passwordTextField.text
-        user.email = "gabewils4@gmail.com"
         user.signUpInBackground(block: { (success, error) in
             if success {
                 print("successfully signed up the user")
@@ -100,7 +101,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         PFUser.logInWithUsername(inBackground: usernameTextField.text!, password: passwordTextField.text!, block: { (user, error) in
             if user != nil {
                 // Yes, User Exists
-                self.performSegue(withIdentifier: "showMap", sender: nil)
+                self.performSegue(withIdentifier: "showTB", sender: nil)
             } else {
                 // No, User Doesn't Exist
             }
