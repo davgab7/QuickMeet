@@ -465,17 +465,26 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lHk-yO-KkV">
-                                            <rect key="frame" x="0.0" y="510" width="375" height="45"/>
+                                            <rect key="frame" x="20" y="255" width="335" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umh-6n-imk">
+                                            <rect key="frame" x="20" y="295" width="335" height="1"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="1xN-ne-UfJ" id="tNy-ey-O6Q"/>
                                     <outlet property="imageView" destination="zkg-Cb-m2E" id="oEJ-wg-KCz"/>
+                                    <outlet property="textField" destination="lHk-yO-KkV" id="oE5-E3-csb"/>
                                     <outlet property="titleLabel" destination="Ihh-oC-FHa" id="Wxg-nK-Vkb"/>
                                 </connections>
                             </collectionViewCell>
@@ -485,7 +494,17 @@
                             <outlet property="delegate" destination="uTV-xW-alb" id="bU7-r8-97i"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="I4t-Wt-pAf"/>
+                    <navigationItem key="navigationItem" id="I4t-Wt-pAf">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="cS9-Hx-N3h">
+                            <connections>
+                                <action selector="saveAction:" destination="uTV-xW-alb" id="a1y-PO-44n"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveOutlet" destination="cS9-Hx-N3h" id="Vz7-k6-6PR"/>
+                        <segue destination="m44-Ud-6pZ" kind="show" identifier="showTabBar" id="uOb-XV-oeo"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rU8-6Y-Qyw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -498,6 +517,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ADu-eD-JMK"/>
+        <segue reference="uOb-XV-oeo"/>
     </inferredMetricsTieBreakers>
 </document>

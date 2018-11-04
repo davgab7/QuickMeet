@@ -85,6 +85,11 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         let user = PFUser()
         user.username = usernameTextField.text
         user.password = passwordTextField.text
+        
+        let imageData = UIImage(named: "DefaultProfilePicture")!.pngData()
+        //create parse file
+        let parseImageFile = PFFile(name: "profilePicture.png", data: imageData!)
+        user["profilePicture"] = parseImageFile
         user.signUpInBackground(block: { (success, error) in
             if success {
                 self.performSegue(withIdentifier: "showChooseMedia", sender: nil)
