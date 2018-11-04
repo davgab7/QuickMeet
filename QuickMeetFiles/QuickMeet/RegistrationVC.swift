@@ -56,17 +56,19 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         }
         textFieldDidChange()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if PFUser.current() != nil {
+            self.performSegue(withIdentifier: "showTB", sender: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        if PFUser.current() != nil {
-            self.performSegue(withIdentifier: "showChooseMedia", sender: nil)
-            //self.performSegue(withIdentifier: "showTabBar", sender: nil)
-        }
-    }
+    
     
     func setupUI() {
         submitLoginSignUpOutlet.alpha = 0.5
@@ -100,8 +102,8 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         PFUser.logInWithUsername(inBackground: usernameTextField.text!, password: passwordTextField.text!, block: { (user, error) in
             if user != nil {
                 // Yes, User Exists
-                print("showChooseMedia")
-                self.performSegue(withIdentifier: "showChooseMedia", sender: nil)
+                self.performSegue(withIdentifier: "showTB", sender: nil)
+
             } else {
                 // No, User Doesn't Exist
             }
