@@ -13,4 +13,11 @@ public class User {
     var username: String!
     var objectID: String!
     var image: UIImage!
+    
+    var phone: String!
+    var email: String!
+    var facebook: String!
+    var snapchat: String!
+    var instagram: String!
 }
+
