@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33968BB93D141754A841776D /* Pods_QuickMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A1EF5E91202EE91422B382 /* Pods_QuickMeet.framework */; };
+		510ADC6F673BDB76B039F485 /* Pods_QuickMeetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1C0C9F11EBE0954D03247B /* Pods_QuickMeetTests.framework */; };
+		654F9D20295C5DF970FF3A51 /* Pods_QuickMeetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422606F48C654F58BA503DEB /* Pods_QuickMeetUITests.framework */; };
+		8C9606D6218E6D71004663F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9606D5218E6D71004663F8 /* AppDelegate.swift */; };
+		8C9606D8218E6D71004663F8 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9606D7218E6D71004663F8 /* RegistrationVC.swift */; };
+		8C9606DA218E6D71004663F8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9606D9218E6D71004663F8 /* SecondViewController.swift */; };
+		8C9606DD218E6D71004663F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9606DB218E6D71004663F8 /* Main.storyboard */; };
+		8C9606DF218E6D74004663F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C9606DE218E6D74004663F8 /* Assets.xcassets */; };
+		8C9606E2218E6D74004663F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9606E0218E6D74004663F8 /* LaunchScreen.storyboard */; };
+		8C9606ED218E6D74004663F8 /* QuickMeetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9606EC218E6D74004663F8 /* QuickMeetTests.swift */; };
+		8C9606F8218E6D74004663F8 /* QuickMeetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9606F7218E6D74004663F8 /* QuickMeetUITests.swift */; };
+		8C960706218E74F0004663F8 /* ChooseMediaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C960705218E74F0004663F8 /* ChooseMediaVC.swift */; };
+		8C960708218E75C0004663F8 /* ChooseMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C960707218E75C0004663F8 /* ChooseMediaCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C9606E9218E6D74004663F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C9606CA218E6D70004663F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C9606D1218E6D71004663F8;
+			remoteInfo = QuickMeet;
+		};
+		8C9606F4218E6D74004663F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C9606CA218E6D70004663F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C9606D1218E6D71004663F8;
+			remoteInfo = QuickMeet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28357ECA31DE44C64FF11FA9 /* Pods-QuickMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMeet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickMeet/Pods-QuickMeet.debug.xcconfig"; sourceTree = "<group>"; };
+		3A93CEBE033998008C48F152 /* Pods-QuickMeetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMeetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickMeetTests/Pods-QuickMeetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		422606F48C654F58BA503DEB /* Pods_QuickMeetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickMeetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D2F06FDC0708E158D0B1947 /* Pods-QuickMeetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMeetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickMeetUITests/Pods-QuickMeetUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D2BA20563A18DCC9CE854BF /* Pods-QuickMeetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMeetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickMeetTests/Pods-QuickMeetTests.release.xcconfig"; sourceTree = "<group>"; };
+		6F34C2801C04E76710FE39C8 /* Pods-QuickMeetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMeetUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickMeetUITests/Pods-QuickMeetUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8C9606D2218E6D71004663F8 /* QuickMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C9606D5218E6D71004663F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8C9606D7218E6D71004663F8 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		8C9606D9218E6D71004663F8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		8C9606DC218E6D71004663F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C9606DE218E6D74004663F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C9606E1218E6D74004663F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C9606E3218E6D74004663F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C9606E8218E6D74004663F8 /* QuickMeetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickMeetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C9606EC218E6D74004663F8 /* QuickMeetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickMeetTests.swift; sourceTree = "<group>"; };
+		8C9606EE218E6D74004663F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C9606F3218E6D74004663F8 /* QuickMeetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickMeetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C9606F7218E6D74004663F8 /* QuickMeetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickMeetUITests.swift; sourceTree = "<group>"; };
+		8C9606F9218E6D74004663F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C960705218E74F0004663F8 /* ChooseMediaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMediaVC.swift; sourceTree = "<group>"; };
+		8C960707218E75C0004663F8 /* ChooseMediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMediaCell.swift; sourceTree = "<group>"; };
+		8D1C0C9F11EBE0954D03247B /* Pods_QuickMeetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickMeetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4A1EF5E91202EE91422B382 /* Pods_QuickMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB08D76FC8DE2E04FF1A1270 /* Pods-QuickMeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMeet.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickMeet/Pods-QuickMeet.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C9606CF218E6D71004663F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33968BB93D141754A841776D /* Pods_QuickMeet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C9606E5218E6D74004663F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				510ADC6F673BDB76B039F485 /* Pods_QuickMeetTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C9606F0218E6D74004663F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				654F9D20295C5DF970FF3A51 /* Pods_QuickMeetUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E97D9A1C52444E92FAEA932 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28357ECA31DE44C64FF11FA9 /* Pods-QuickMeet.debug.xcconfig */,
+				EB08D76FC8DE2E04FF1A1270 /* Pods-QuickMeet.release.xcconfig */,
+				3A93CEBE033998008C48F152 /* Pods-QuickMeetTests.debug.xcconfig */,
+				5D2BA20563A18DCC9CE854BF /* Pods-QuickMeetTests.release.xcconfig */,
+				4D2F06FDC0708E158D0B1947 /* Pods-QuickMeetUITests.debug.xcconfig */,
+				6F34C2801C04E76710FE39C8 /* Pods-QuickMeetUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8C9606C9218E6D70004663F8 = {
+			isa = PBXGroup;
+			children = (
+				8C9606D4218E6D71004663F8 /* QuickMeet */,
+				8C9606EB218E6D74004663F8 /* QuickMeetTests */,
+				8C9606F6218E6D74004663F8 /* QuickMeetUITests */,
+				8C9606D3218E6D71004663F8 /* Products */,
+				2E97D9A1C52444E92FAEA932 /* Pods */,
+				C1C9DBEA9BBB1B8BDF7EFE02 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8C9606D3218E6D71004663F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C9606D2218E6D71004663F8 /* QuickMeet.app */,
+				8C9606E8218E6D74004663F8 /* QuickMeetTests.xctest */,
+				8C9606F3218E6D74004663F8 /* QuickMeetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C9606D4218E6D71004663F8 /* QuickMeet */ = {
+			isa = PBXGroup;
+			children = (
+				8C9606D5218E6D71004663F8 /* AppDelegate.swift */,
+				8C9606D7218E6D71004663F8 /* RegistrationVC.swift */,
+				8C960705218E74F0004663F8 /* ChooseMediaVC.swift */,
+				8C960707218E75C0004663F8 /* ChooseMediaCell.swift */,
+				8C9606D9218E6D71004663F8 /* SecondViewController.swift */,
+				8C9606DB218E6D71004663F8 /* Main.storyboard */,
+				8C9606DE218E6D74004663F8 /* Assets.xcassets */,
+				8C9606E0218E6D74004663F8 /* LaunchScreen.storyboard */,
+				8C9606E3218E6D74004663F8 /* Info.plist */,
+			);
+			path = QuickMeet;
+			sourceTree = "<group>";
+		};
+		8C9606EB218E6D74004663F8 /* QuickMeetTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C9606EC218E6D74004663F8 /* QuickMeetTests.swift */,
+				8C9606EE218E6D74004663F8 /* Info.plist */,
+			);
+			path = QuickMeetTests;
+			sourceTree = "<group>";
+		};
+		8C9606F6218E6D74004663F8 /* QuickMeetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8C9606F7218E6D74004663F8 /* QuickMeetUITests.swift */,
+				8C9606F9218E6D74004663F8 /* Info.plist */,
+			);
+			path = QuickMeetUITests;
+			sourceTree = "<group>";
+		};
+		C1C9DBEA9BBB1B8BDF7EFE02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4A1EF5E91202EE91422B382 /* Pods_QuickMeet.framework */,
+				8D1C0C9F11EBE0954D03247B /* Pods_QuickMeetTests.framework */,
+				422606F48C654F58BA503DEB /* Pods_QuickMeetUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C9606D1218E6D71004663F8 /* QuickMeet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C9606FC218E6D74004663F8 /* Build configuration list for PBXNativeTarget "QuickMeet" */;
+			buildPhases = (
+				4233EEF9D0B0B793F0F3A514 /* [CP] Check Pods Manifest.lock */,
+				8C9606CE218E6D71004663F8 /* Sources */,
+				8C9606CF218E6D71004663F8 /* Frameworks */,
+				8C9606D0218E6D71004663F8 /* Resources */,
+				288340A4477E0A3AE39FEC60 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickMeet;
+			productName = QuickMeet;
+			productReference = 8C9606D2218E6D71004663F8 /* QuickMeet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C9606E7218E6D74004663F8 /* QuickMeetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C9606FF218E6D74004663F8 /* Build configuration list for PBXNativeTarget "QuickMeetTests" */;
+			buildPhases = (
+				E4D6ECEB50B7CFD3F42DBAB4 /* [CP] Check Pods Manifest.lock */,
+				8C9606E4218E6D74004663F8 /* Sources */,
+				8C9606E5218E6D74004663F8 /* Frameworks */,
+				8C9606E6218E6D74004663F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C9606EA218E6D74004663F8 /* PBXTargetDependency */,
+			);
+			name = QuickMeetTests;
+			productName = QuickMeetTests;
+			productReference = 8C9606E8218E6D74004663F8 /* QuickMeetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8C9606F2218E6D74004663F8 /* QuickMeetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C960702218E6D74004663F8 /* Build configuration list for PBXNativeTarget "QuickMeetUITests" */;
+			buildPhases = (
+				0FC259FDE73ED63FDDB0337F /* [CP] Check Pods Manifest.lock */,
+				8C9606EF218E6D74004663F8 /* Sources */,
+				8C9606F0218E6D74004663F8 /* Frameworks */,
+				8C9606F1218E6D74004663F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C9606F5218E6D74004663F8 /* PBXTargetDependency */,
+			);
+			name = QuickMeetUITests;
+			productName = QuickMeetUITests;
+			productReference = 8C9606F3218E6D74004663F8 /* QuickMeetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C9606CA218E6D70004663F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Gabe Wilson";
+				TargetAttributes = {
+					8C9606D1218E6D71004663F8 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					8C9606E7218E6D74004663F8 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 8C9606D1218E6D71004663F8;
+					};
+					8C9606F2218E6D74004663F8 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 8C9606D1218E6D71004663F8;
+					};
+				};
+			};
+			buildConfigurationList = 8C9606CD218E6D70004663F8 /* Build configuration list for PBXProject "QuickMeet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C9606C9218E6D70004663F8;
+			productRefGroup = 8C9606D3218E6D71004663F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C9606D1218E6D71004663F8 /* QuickMeet */,
+				8C9606E7218E6D74004663F8 /* QuickMeetTests */,
+				8C9606F2218E6D74004663F8 /* QuickMeetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C9606D0218E6D71004663F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C9606E2218E6D74004663F8 /* LaunchScreen.storyboard in Resources */,
+				8C9606DF218E6D74004663F8 /* Assets.xcassets in Resources */,
+				8C9606DD218E6D71004663F8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C9606E6218E6D74004663F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C9606F1218E6D74004663F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FC259FDE73ED63FDDB0337F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickMeetUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		288340A4477E0A3AE39FEC60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QuickMeet/Pods-QuickMeet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/SendGrid-Swift/SendGrid_Swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SendGrid_Swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickMeet/Pods-QuickMeet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4233EEF9D0B0B793F0F3A514 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickMeet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4D6ECEB50B7CFD3F42DBAB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickMeetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C9606CE218E6D71004663F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C960708218E75C0004663F8 /* ChooseMediaCell.swift in Sources */,
+				8C960706218E74F0004663F8 /* ChooseMediaVC.swift in Sources */,
+				8C9606DA218E6D71004663F8 /* SecondViewController.swift in Sources */,
+				8C9606D6218E6D71004663F8 /* AppDelegate.swift in Sources */,
+				8C9606D8218E6D71004663F8 /* RegistrationVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C9606E4218E6D74004663F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C9606ED218E6D74004663F8 /* QuickMeetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C9606EF218E6D74004663F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C9606F8218E6D74004663F8 /* QuickMeetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C9606EA218E6D74004663F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C9606D1218E6D71004663F8 /* QuickMeet */;
+			targetProxy = 8C9606E9218E6D74004663F8 /* PBXContainerItemProxy */;
+		};
+		8C9606F5218E6D74004663F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C9606D1218E6D71004663F8 /* QuickMeet */;
+			targetProxy = 8C9606F4218E6D74004663F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C9606DB218E6D71004663F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C9606DC218E6D71004663F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8C9606E0218E6D74004663F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C9606E1218E6D74004663F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C9606FA218E6D74004663F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8C9606FB218E6D74004663F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C9606FD218E6D74004663F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28357ECA31DE44C64FF11FA9 /* Pods-QuickMeet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PEB6PV8M5G;
+				INFOPLIST_FILE = QuickMeet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com..QuickMeet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C9606FE218E6D74004663F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB08D76FC8DE2E04FF1A1270 /* Pods-QuickMeet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PEB6PV8M5G;
+				INFOPLIST_FILE = QuickMeet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com..QuickMeet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8C960700218E6D74004663F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A93CEBE033998008C48F152 /* Pods-QuickMeetTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PEB6PV8M5G;
+				INFOPLIST_FILE = QuickMeetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com..QuickMeetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuickMeet.app/QuickMeet";
+			};
+			name = Debug;
+		};
+		8C960701218E6D74004663F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D2BA20563A18DCC9CE854BF /* Pods-QuickMeetTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PEB6PV8M5G;
+				INFOPLIST_FILE = QuickMeetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com..QuickMeetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuickMeet.app/QuickMeet";
+			};
+			name = Release;
+		};
+		8C960703218E6D74004663F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D2F06FDC0708E158D0B1947 /* Pods-QuickMeetUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PEB6PV8M5G;
+				INFOPLIST_FILE = QuickMeetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com..QuickMeetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QuickMeet;
+			};
+			name = Debug;
+		};
+		8C960704218E6D74004663F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F34C2801C04E76710FE39C8 /* Pods-QuickMeetUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PEB6PV8M5G;
+				INFOPLIST_FILE = QuickMeetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com..QuickMeetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QuickMeet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C9606CD218E6D70004663F8 /* Build configuration list for PBXProject "QuickMeet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C9606FA218E6D74004663F8 /* Debug */,
+				8C9606FB218E6D74004663F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C9606FC218E6D74004663F8 /* Build configuration list for PBXNativeTarget "QuickMeet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C9606FD218E6D74004663F8 /* Debug */,
+				8C9606FE218E6D74004663F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C9606FF218E6D74004663F8 /* Build configuration list for PBXNativeTarget "QuickMeetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C960700218E6D74004663F8 /* Debug */,
+				8C960701218E6D74004663F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C960702218E6D74004663F8 /* Build configuration list for PBXNativeTarget "QuickMeetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C960703218E6D74004663F8 /* Debug */,
+				8C960704218E6D74004663F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C9606CA218E6D70004663F8 /* Project object */;
+}
