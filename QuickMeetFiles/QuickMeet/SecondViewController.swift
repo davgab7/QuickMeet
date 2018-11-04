@@ -16,7 +16,9 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     var userArray : [User] = []
     var currentUserArray : [User] = []
-    
+    var selectedUser = User()
+    var dataDict = ["phone":"", "email": "", "facebook": "", "snapchat": "", "instagram": ""]
+    var unwinded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,22 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         alterLayout()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedUser = userArray[indexPath.row]
+        self.performSegue(withIdentifier: "showSendScreen", sender: nil)
+    }
+    
+    func queryUserData() {
+        let query = PFQuery(className: "_User")
+        query.getObjectInBackground(withId: (PFUser.current()?.objectId)!) { (object, error) in
+            let user = object as! PFUser
+            for key in self.dataDict.keys {
+                self.dataDict[key] = user[key] as? String
+            }
+        }
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentUserArray.count
@@ -107,4 +125,35 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
 
+    @IBAction func registrationUnwind(segue: UIStoryboardSegue) {
+    }
+    
+    @IBAction func sendUnwind(segue: UIStoryboardSegue) {
+        if segue.identifier == "sendUnwind" {
+            unwinded = true
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if (unwinded) {
+            let alert = UIAlertController(title: "Successfully Sent", message: "You've successfully shared your info with " + self.selectedUser.username + "!", preferredStyle: UIAlertController.Style.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+            unwinded = false
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navVC = segue.destination as? UINavigationController
+
+        if segue.identifier == "showSendScreen" {
+            let targetVC = navVC?.viewControllers.first as! sendInfoVC
+            targetVC.selectedUser = self.selectedUser
+        }
+    }
+    
 }

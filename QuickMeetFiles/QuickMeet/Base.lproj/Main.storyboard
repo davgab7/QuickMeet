@@ -81,9 +81,11 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="aV8-ce-Z3c"/>
                     <connections>
                         <outlet property="searchBar" destination="0LX-g2-sVB" id="fcq-DE-fVx"/>
                         <outlet property="searchTableView" destination="ydK-xV-jsY" id="qEp-NB-lXm"/>
+                        <segue destination="3nm-XB-QBQ" kind="show" identifier="showSendScreen" id="JBt-c2-xbI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -443,7 +445,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmL-cO-7gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3574" y="0.0"/>
+            <point key="canvasLocation" x="-3422" y="-365"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ivE-kI-QcD">
@@ -609,6 +611,7 @@
                         <outlet property="usernameTextField" destination="De6-ip-eBJ" id="Km8-Y2-Web"/>
                         <segue destination="wcm-5K-hXk" kind="show" identifier="" id="web-kK-cLs"/>
                         <segue destination="m44-Ud-6pZ" kind="show" identifier="showTB" id="Y8P-50-wZf"/>
+
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8s-14-eK6" sceneMemberID="firstResponder"/>
@@ -717,6 +720,109 @@
             </objects>
             <point key="canvasLocation" x="-2434.4000000000001" y="-0.44977511244377816"/>
         </scene>
+        <!--sendInfo-->
+        <scene sceneID="ECc-4y-7Et">
+            <objects>
+                <viewController title="sendInfo" id="khe-Ld-AGS" customClass="sendInfoVC" customModule="QuickMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dvs-Kd-Vlg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vjg-nG-juy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="55" id="luF-dq-wya" customClass="ChooseMediaCell" customModule="QuickMeet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="luF-dq-wya" id="ZIt-kW-JgN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J9s-AM-Vhj">
+                                                    <rect key="frame" x="15" y="8" width="39" height="38.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="38.5" id="6gX-5E-R4h"/>
+                                                        <constraint firstAttribute="width" constant="39" id="G6e-eQ-USO"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="39" id="ceV-Ku-iww"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Media Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTe-1Y-VAL">
+                                                    <rect key="frame" x="62" y="17" width="169" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" restorationIdentifier="mediaSwitch" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ccx-95-vI3">
+                                                    <rect key="frame" x="311" y="11" width="49" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="valueChanged:" destination="khe-Ld-AGS" eventType="valueChanged" id="qEC-iw-rTe"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="J9s-AM-Vhj" firstAttribute="centerY" secondItem="ZIt-kW-JgN" secondAttribute="centerY" id="PZe-ZF-Ssr"/>
+                                                <constraint firstItem="J9s-AM-Vhj" firstAttribute="leading" secondItem="ZIt-kW-JgN" secondAttribute="leadingMargin" id="Vd6-zQ-enV"/>
+                                                <constraint firstItem="J9s-AM-Vhj" firstAttribute="top" secondItem="ZIt-kW-JgN" secondAttribute="topMargin" constant="-3" id="cjm-O0-jCG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mediaImageView" destination="J9s-AM-Vhj" id="zva-DX-qsT"/>
+                                            <outlet property="mediaNameLabel" destination="LTe-1Y-VAL" id="k2o-9Z-lFs"/>
+                                            <outlet property="mediaSwitch" destination="Ccx-95-vI3" id="n0A-7g-uC8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oe4-cR-Rtk"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Select Info to Send" id="Seg-jQ-TLY">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="OI6-Ar-w9o">
+                            <connections>
+                                <segue destination="Bdx-ix-qQ4" kind="unwind" unwindAction="registrationUnwindWithSegue:" id="GHe-Mp-0xg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="lTp-zE-3gC">
+                            <connections>
+                                <action selector="sendAction:" destination="khe-Ld-AGS" id="hP3-ij-Lah"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vjg-nG-juy" id="8vc-NK-mfX"/>
+                        <segue destination="Bdx-ix-qQ4" kind="unwind" identifier="sendUnwind" unwindAction="sendUnwindWithSegue:" id="uc0-0Y-Vuf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kaD-5u-y9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Bdx-ix-qQ4" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2544.8000000000002" y="-321.58920539730138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vvw-Iu-RFv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3nm-XB-QBQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dd2-vG-iVh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="khe-Ld-AGS" kind="relationship" relationship="rootViewController" id="hHc-Cn-buM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mG-ac-fHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1605.5999999999999" y="-321.58920539730138"/>
+        </scene>
     </scenes>
     <resources>
         <image name="LaunchScreenBackground" width="194" height="275"/>
@@ -726,5 +832,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="uOb-XV-oeo"/>
         <segue reference="zUU-7A-OH3"/>
+
     </inferredMetricsTieBreakers>
 </document>

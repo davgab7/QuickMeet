@@ -27,6 +27,10 @@
 		8C960714218EED67004663F8 /* ContactDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C960713218EED67004663F8 /* ContactDetailsVC.swift */; };
 		F478FF2A218E839F003CDBE0 /* tableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F478FF29218E839F003CDBE0 /* tableViewCell.swift */; };
 		F478FF2C218E9646003CDBE0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F478FF2B218E9646003CDBE0 /* User.swift */; };
+		F48C16CE218EBF3D0029A20D /* EnterInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C960709218E8171004663F8 /* EnterInfoVC.swift */; };
+		F48C16CF218EBF480029A20D /* EnterInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96070B218E82F9004663F8 /* EnterInfoCollectionViewCell.swift */; };
+		F48C16D3218EC1F80029A20D /* sendInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48C16D2218EC1F80029A20D /* sendInfoVC.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,7 @@
 		EB08D76FC8DE2E04FF1A1270 /* Pods-QuickMeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMeet.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickMeet/Pods-QuickMeet.release.xcconfig"; sourceTree = "<group>"; };
 		F478FF29218E839F003CDBE0 /* tableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCell.swift; sourceTree = "<group>"; };
 		F478FF2B218E9646003CDBE0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F48C16D2218EC1F80029A20D /* sendInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendInfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +162,8 @@
 				8C960711218EE417004663F8 /* InboxVC.swift */,
 				8C960713218EED67004663F8 /* ContactDetailsVC.swift */,
 				8C96070F218EC0CD004663F8 /* ProfileVC.swift */,
+				F48C16D2218EC1F80029A20D /* sendInfoVC.swift */,
+
 				F478FF2B218E9646003CDBE0 /* User.swift */,
 				F478FF29218E839F003CDBE0 /* tableViewCell.swift */,
 				8C9606DB218E6D71004663F8 /* Main.storyboard */,
@@ -423,6 +430,7 @@
 				F478FF2C218E9646003CDBE0 /* User.swift in Sources */,
 				8C96070E218EBFE4004663F8 /* EnterInfoCollectionViewCell.swift in Sources */,
 				8C96070D218EBFE2004663F8 /* EnterInfoVC.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
