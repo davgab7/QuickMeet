@@ -30,6 +30,9 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func registrationUnwind(segue: UIStoryboardSegue) {
+    }
+    
     @IBAction func toggleLoginSignUpAction(_ sender: Any) {
         let yourAttributes : [NSAttributedString.Key: Any] = [
             NSAttributedString.Key.font : UIFont.systemFont(ofSize: 12),
