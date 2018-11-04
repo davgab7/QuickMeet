@@ -14,7 +14,7 @@ class ChooseMediaVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func nextAction(_ sender: Any) {
-        self.performSegue(withIdentifier: "showEnterInfo", sender: nil)
+        self.performSegue(withIdentifier: "showProfile", sender: nil)
     }
     
     var chosenMediaItems = [String]()
@@ -55,10 +55,10 @@ class ChooseMediaVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let targetVC = segue.destination as! EnterInfoVC
+        /*let targetVC = segue.destination as! EnterInfoVC
         if segue.identifier == "showEnterInfo" {
             targetVC.chosenItems = self.chosenMediaItems
-        }
+        }*/
     }
     
     

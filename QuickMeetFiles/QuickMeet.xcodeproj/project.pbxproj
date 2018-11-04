@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		33968BB93D141754A841776D /* Pods_QuickMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A1EF5E91202EE91422B382 /* Pods_QuickMeet.framework */; };
 		510ADC6F673BDB76B039F485 /* Pods_QuickMeetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1C0C9F11EBE0954D03247B /* Pods_QuickMeetTests.framework */; };
+		56C8815A218E965E0075ACDC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C88159218E965E0075ACDC /* ProfileViewController.swift */; };
+		56C8815C218EB6180075ACDC /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C8815B218EB6180075ACDC /* SelfSizedTableView.swift */; };
 		654F9D20295C5DF970FF3A51 /* Pods_QuickMeetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422606F48C654F58BA503DEB /* Pods_QuickMeetUITests.framework */; };
 		8C9606D6218E6D71004663F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9606D5218E6D71004663F8 /* AppDelegate.swift */; };
 		8C9606D8218E6D71004663F8 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9606D7218E6D71004663F8 /* RegistrationVC.swift */; };
@@ -46,6 +48,8 @@
 		3A93CEBE033998008C48F152 /* Pods-QuickMeetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMeetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickMeetTests/Pods-QuickMeetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		422606F48C654F58BA503DEB /* Pods_QuickMeetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickMeetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2F06FDC0708E158D0B1947 /* Pods-QuickMeetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMeetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickMeetUITests/Pods-QuickMeetUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		56C88159218E965E0075ACDC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		56C8815B218EB6180075ACDC /* SelfSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
 		5D2BA20563A18DCC9CE854BF /* Pods-QuickMeetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMeetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickMeetTests/Pods-QuickMeetTests.release.xcconfig"; sourceTree = "<group>"; };
 		6F34C2801C04E76710FE39C8 /* Pods-QuickMeetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMeetUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickMeetUITests/Pods-QuickMeetUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8C9606D2218E6D71004663F8 /* QuickMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +152,8 @@
 				8C9606DE218E6D74004663F8 /* Assets.xcassets */,
 				8C9606E0218E6D74004663F8 /* LaunchScreen.storyboard */,
 				8C9606E3218E6D74004663F8 /* Info.plist */,
+				56C88159218E965E0075ACDC /* ProfileViewController.swift */,
+				56C8815B218EB6180075ACDC /* SelfSizedTableView.swift */,
 			);
 			path = QuickMeet;
 			sourceTree = "<group>";
@@ -398,10 +404,12 @@
 			files = (
 				8C960708218E75C0004663F8 /* ChooseMediaCell.swift in Sources */,
 				8C960706218E74F0004663F8 /* ChooseMediaVC.swift in Sources */,
+				56C8815C218EB6180075ACDC /* SelfSizedTableView.swift in Sources */,
 				8C9606DA218E6D71004663F8 /* SecondViewController.swift in Sources */,
 				8C96070A218E8171004663F8 /* EnterInfoVC.swift in Sources */,
 				8C96070C218E82F9004663F8 /* EnterInfoCollectionViewCell.swift in Sources */,
 				8C9606D6218E6D71004663F8 /* AppDelegate.swift in Sources */,
+				56C8815A218E965E0075ACDC /* ProfileViewController.swift in Sources */,
 				8C9606D8218E6D71004663F8 /* RegistrationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,7 +587,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PEB6PV8M5G;
+				DEVELOPMENT_TEAM = LB72RBVT2A;
 				INFOPLIST_FILE = QuickMeet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -598,7 +606,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PEB6PV8M5G;
+				DEVELOPMENT_TEAM = LB72RBVT2A;
 				INFOPLIST_FILE = QuickMeet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
