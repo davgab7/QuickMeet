@@ -17,7 +17,10 @@ class sendInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let ContactInfo = PFObject(className: "ContactInfo")
         ContactInfo["receiver"] = selectedUser.username
-        ContactInfo["sender"] = PFUser.current()?.username
+        ContactInfo["receiverID"] = selectedUser.objectID
+        ContactInfo["senderUsername"] = PFUser.current()?.username
+        ContactInfo["senderPointer"] = PFObject(withoutDataWithClassName: "_User", objectId: PFUser.current()?.objectId)
+        ContactInfo["senderID"] = PFUser.current()?.objectId
         ContactInfo["phone"] = dataArray[0]
         ContactInfo["email"] = dataArray[1]
         ContactInfo["facebook"] = dataArray[2]
