@@ -105,6 +105,8 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         PFUser.logInWithUsername(inBackground: usernameTextField.text!, password: passwordTextField.text!, block: { (user, error) in
             if user != nil {
                 // Yes, User Exists
+                self.usernameTextField.text = ""
+                self.passwordTextField.text = ""
                 self.performSegue(withIdentifier: "showTB", sender: nil)
 
             } else {

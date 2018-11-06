@@ -57,9 +57,9 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     }
     
     func showLogout() {
-        let refreshAlert = UIAlertController(title: "Refresh", message: "All data will be lost.", preferredStyle: UIAlertController.Style.alert)
+        let refreshAlert = UIAlertController(title: "Refresh", message: "Are you sure you want to log out?", preferredStyle: UIAlertController.Style.alert)
         
-        refreshAlert.addAction(UIAlertAction(title: "Logout", style: .destructive, handler: { (action: UIAlertAction!) in
+        refreshAlert.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { (action: UIAlertAction!) in
             PFUser.logOut()
             self.performSegue(withIdentifier: "registrationUnwind", sender: nil)
             
@@ -72,19 +72,22 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     }
     
     
-    var mediaItems = ["Phone","Email", "Facebook", "Snapchat", "Instagram"]
+    var mediaItems = ["Phone","Email", "Facebook", "Snapchat", "Instagram", "Log Out"]
     var dataArray = ["","","","",""]
     override func viewDidLoad() {
         setupUI()
     }
     
     func setupUI() {
+        tableView.isScrollEnabled = false
         imagePicker.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
         tableView.reloadData()
+        print(tableView.allowsSelection, "can i select tv")
+        tableView.allowsSelection = true
+        print("now i can", tableView.allowsSelection)
         usernameLabel.text = PFUser.current()?.username
-        self.title = "Test"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(ProfileVC.logoutAction))
         if let image = PFUser.current()!["profilePicture"] as? PFFile {
             image.getDataInBackground {
@@ -138,30 +141,44 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ChooseMediaCell
-        cell.mediaNameLabel.text = dataArray[indexPath.row]
-        cell.mediaImageView.image = UIImage(named: mediaItems[indexPath.row])
-        if dataArray[indexPath.row] != "" {
-            cell.mediaSwitch.isOn = true
-        } else {
-            cell.mediaSwitch.isOn = false
-        }
-        if dataArray[indexPath.row] == "" {
-            if indexPath.row == 0 {
-                cell.mediaNameLabel.text = "Phone"
-            } else if indexPath.row == 1 {
-                cell.mediaNameLabel.text = "Email"
-            } else if indexPath.row == 2 {
-                cell.mediaNameLabel.text = "Facebook"
-            } else if indexPath.row == 3 {
-                cell.mediaNameLabel.text = "Snapchat"
-            } else if indexPath.row == 4 {
-                cell.mediaNameLabel.text = "Instagram"
+        cell.selectionStyle = .none
+        if indexPath.row < 5 {
+            cell.mediaNameLabel.text = dataArray[indexPath.row]
+            cell.mediaImageView.image = UIImage(named: mediaItems[indexPath.row])
+            if dataArray[indexPath.row] != "" {
+                cell.mediaSwitch.isOn = true
+            } else {
+                cell.mediaSwitch.isOn = false
             }
+            if dataArray[indexPath.row] == "" {
+                if indexPath.row == 0 {
+                    cell.mediaNameLabel.text = "Phone"
+                } else if indexPath.row == 1 {
+                    cell.mediaNameLabel.text = "Email"
+                } else if indexPath.row == 2 {
+                    cell.mediaNameLabel.text = "Facebook"
+                } else if indexPath.row == 3 {
+                    cell.mediaNameLabel.text = "Snapchat"
+                } else if indexPath.row == 4 {
+                    cell.mediaNameLabel.text = "Instagram"
+                }
+            }
+        } else {
+            cell.mediaNameLabel.text = "Logout"
+            cell.mediaImageView.image = UIImage(named: "Logout")
+            cell.mediaSwitch.isHidden = true
         }
         
         cell.mediaSwitch.tag = indexPath.row
         cell.mediaSwitch.addTarget(self, action: #selector(ProfileVC.onSwitchValueChanged), for: .touchUpInside)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected")
+        if indexPath.row == 5 {
+            showLogout()
+        }
     }
     
     /*func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [AnyHashable: Any]!) {

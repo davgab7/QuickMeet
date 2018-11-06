@@ -52,7 +52,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")  as! tableViewCell
-        
+        cell.selectionStyle = .none
         cell.personName.text = currentUserArray[indexPath.row].username
         cell.personImage.image = currentUserArray[indexPath.row].image
         return cell
@@ -83,7 +83,16 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     private func setUpSearchBar() {
+        let singleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.singleTap(sender:)))
+        singleTapGestureRecognizer.numberOfTapsRequired = 1
+        singleTapGestureRecognizer.isEnabled = true
+        singleTapGestureRecognizer.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(singleTapGestureRecognizer)
         searchBar.delegate = self
+    }
+    
+    @objc func singleTap(sender: UITapGestureRecognizer) {
+        self.searchBar.resignFirstResponder()
     }
     
     func alterLayout() {
@@ -125,7 +134,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
 
-    @IBAction func registrationUnwind(segue: UIStoryboardSegue) {
+    @IBAction func searchUnwind(segue: UIStoryboardSegue) {
     }
     
     @IBAction func sendUnwind(segue: UIStoryboardSegue) {

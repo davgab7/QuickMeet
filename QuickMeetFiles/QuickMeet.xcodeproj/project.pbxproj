@@ -12,7 +12,7 @@
 		654F9D20295C5DF970FF3A51 /* Pods_QuickMeetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422606F48C654F58BA503DEB /* Pods_QuickMeetUITests.framework */; };
 		8C9606D6218E6D71004663F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9606D5218E6D71004663F8 /* AppDelegate.swift */; };
 		8C9606D8218E6D71004663F8 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9606D7218E6D71004663F8 /* RegistrationVC.swift */; };
-		8C9606DA218E6D71004663F8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9606D9218E6D71004663F8 /* SecondViewController.swift */; };
+		8C9606DA218E6D71004663F8 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9606D9218E6D71004663F8 /* SearchVC.swift */; };
 		8C9606DD218E6D71004663F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9606DB218E6D71004663F8 /* Main.storyboard */; };
 		8C9606DF218E6D74004663F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C9606DE218E6D74004663F8 /* Assets.xcassets */; };
 		8C9606E2218E6D74004663F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9606E0218E6D74004663F8 /* LaunchScreen.storyboard */; };
@@ -25,12 +25,9 @@
 		8C960710218EC0CD004663F8 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96070F218EC0CD004663F8 /* ProfileVC.swift */; };
 		8C960712218EE417004663F8 /* InboxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C960711218EE417004663F8 /* InboxVC.swift */; };
 		8C960714218EED67004663F8 /* ContactDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C960713218EED67004663F8 /* ContactDetailsVC.swift */; };
+		8CA71D39218EF6F100F7E123 /* sendInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48C16D2218EC1F80029A20D /* sendInfoVC.swift */; };
 		F478FF2A218E839F003CDBE0 /* tableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F478FF29218E839F003CDBE0 /* tableViewCell.swift */; };
 		F478FF2C218E9646003CDBE0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F478FF2B218E9646003CDBE0 /* User.swift */; };
-		F48C16CE218EBF3D0029A20D /* EnterInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C960709218E8171004663F8 /* EnterInfoVC.swift */; };
-		F48C16CF218EBF480029A20D /* EnterInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96070B218E82F9004663F8 /* EnterInfoCollectionViewCell.swift */; };
-		F48C16D3218EC1F80029A20D /* sendInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48C16D2218EC1F80029A20D /* sendInfoVC.swift */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +57,7 @@
 		8C9606D2218E6D71004663F8 /* QuickMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9606D5218E6D71004663F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C9606D7218E6D71004663F8 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
-		8C9606D9218E6D71004663F8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		8C9606D9218E6D71004663F8 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		8C9606DC218E6D71004663F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C9606DE218E6D74004663F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C9606E1218E6D74004663F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -158,12 +155,11 @@
 				8C960709218E8171004663F8 /* EnterInfoVC.swift */,
 				8C96070B218E82F9004663F8 /* EnterInfoCollectionViewCell.swift */,
 				8C960707218E75C0004663F8 /* ChooseMediaCell.swift */,
-				8C9606D9218E6D71004663F8 /* SecondViewController.swift */,
+				8C9606D9218E6D71004663F8 /* SearchVC.swift */,
 				8C960711218EE417004663F8 /* InboxVC.swift */,
 				8C960713218EED67004663F8 /* ContactDetailsVC.swift */,
 				8C96070F218EC0CD004663F8 /* ProfileVC.swift */,
 				F48C16D2218EC1F80029A20D /* sendInfoVC.swift */,
-
 				F478FF2B218E9646003CDBE0 /* User.swift */,
 				F478FF29218E839F003CDBE0 /* tableViewCell.swift */,
 				8C9606DB218E6D71004663F8 /* Main.storyboard */,
@@ -421,8 +417,9 @@
 				8C960710218EC0CD004663F8 /* ProfileVC.swift in Sources */,
 				8C960708218E75C0004663F8 /* ChooseMediaCell.swift in Sources */,
 				8C960706218E74F0004663F8 /* ChooseMediaVC.swift in Sources */,
-				8C9606DA218E6D71004663F8 /* SecondViewController.swift in Sources */,
+				8C9606DA218E6D71004663F8 /* SearchVC.swift in Sources */,
 				8C960714218EED67004663F8 /* ContactDetailsVC.swift in Sources */,
+				8CA71D39218EF6F100F7E123 /* sendInfoVC.swift in Sources */,
 				8C9606D6218E6D71004663F8 /* AppDelegate.swift in Sources */,
 				8C960712218EE417004663F8 /* InboxVC.swift in Sources */,
 				8C9606D8218E6D71004663F8 /* RegistrationVC.swift in Sources */,
@@ -430,7 +427,6 @@
 				F478FF2C218E9646003CDBE0 /* User.swift in Sources */,
 				8C96070E218EBFE4004663F8 /* EnterInfoCollectionViewCell.swift in Sources */,
 				8C96070D218EBFE2004663F8 /* EnterInfoVC.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
